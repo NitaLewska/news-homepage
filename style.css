@@ -1,6 +1,7 @@
 /* Box Model Fix */
 html {
     box-sizing: border-box;
+    
 }
 
 *,
@@ -10,8 +11,8 @@ html {
     margin: 0px;
 }
 
-body{
-    margin: 0 auto;
+body {
+    margin: 0 auto 40px;
     min-height: 100vh;
     max-width: 1110px;
     display: flex;
@@ -28,14 +29,14 @@ body{
     font-size: 15px;
 }
 
-main{
+main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr 1fr;
     gap: 70px 30px;
 }
 
-header{
+header {
     width: 100%;
     height: 80px;
     display: flex;
@@ -46,28 +47,28 @@ header{
     margin-top: 65px;
 }
 
-.header_logo{
+.header_logo {
     width: 65px;
     height: 42px;
 }
 
-.header_nav ul{
+.header_nav ul {
     display: flex;
     flex-direction: row;
     gap: 39px;
     color: var(--grayish-blue);
 }
 
-.header_nav ul li{
+.header_nav ul li {
     list-style: none;
     font-size: 16px;
 }
 
-.header_nav ul li a{
+.header_nav ul li a {
     text-decoration: none;
 }
 
-.front_page{
+.front_page {
     grid-area: 1/1/2/3;
 }
 
@@ -108,10 +109,9 @@ header{
     letter-spacing: 5px;
 }
 
-.popular{
+.popular {
     grid-area: 2/1/3/4;
     display: flex;
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     margin-top: 2px;
 }
@@ -125,7 +125,7 @@ header{
     justify-content: space-between;
 }
 
-.popular article img{
+.popular article img {
     width: 100px;
     height: 110px;
     flex-basis: 100%;
@@ -135,7 +135,7 @@ header{
 .popular_rating {
     font-size: 32px;
     font-weight: 600;
-    color:  var(--grayish-blue);
+    color: var(--grayish-blue);
     line-height: 100%;
 }
 
@@ -154,19 +154,19 @@ header{
     padding: 28px 35px 30px 24px;
 }
 
-.new>p{
+.new>p {
     color: var(--soft-orange);
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 29px;
 }
 
-.new article{
+.new article {
     margin-top: 63px;
     position: relative;
 }
 
-.new article::after{
+.new article::after {
     position: absolute;
     content: "";
     height: 1px;
@@ -176,11 +176,11 @@ header{
     bottom: -32px;
 }
 
-.new article:last-of-type::after{
+.new article:last-of-type::after {
     display: none;
 }
 
-.new article:first-of-type{
+.new article:first-of-type {
     margin-top: 0;
 }
 
@@ -194,4 +194,29 @@ header{
 .new article p {
     color: var(--grayish-blue);
     line-height: 170%;
+}
+
+@media (max-width: 1179px) {
+    body{
+        max-width: 95%;
+        margin-bottom: 40px;
+    }
+
+    main {
+    grid-template-columns: 1fr;
+    grid-template-rows:auto;
+}
+
+.front_page {
+    grid-area: auto;
+}
+
+.popular {
+    grid-area: auto;
+    flex-direction: column;
+}
+}
+
+@media (max-width: 639px) {
+    
 }
