@@ -1,39 +1,3 @@
-/* # Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Soft orange: hsl(35, 77%, 62%)
-- Soft red: hsl(5, 85%, 63%)
-
-### Neutral
-
-Off-white: hsl(36, 100%, 99%)
-Grayish blue: hsl(233, 8%, 79%)
-Dark grayish blue: hsl(236, 13%, 42%)
-Very dark blue: hsl(240, 100%, 5%)
-
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 15px
-
-### Font
-
-- Family: [Inter](https://fonts.google.com/specimen/Inter)
-- Weights: 400, 700, 800
- */
-
-
 /* Box Model Fix */
 html {
     box-sizing: border-box;
@@ -48,32 +12,186 @@ html {
 
 body{
     margin: 0 auto;
-    height: 100vh;
-    max-width: 1200px;
+    min-height: 100vh;
+    max-width: 1110px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    font-size: 15px;
 }
 
 main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr 1fr;
-    gap: 30px;
+    gap: 70px 30px;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    margin-top: 65px;
+}
+
+.header_logo{
+    width: 65px;
+    height: 42px;
+}
+
+.header_nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 39px;
+    color: var(--grayish-blue);
+}
+
+.header_nav ul li{
+    list-style: none;
+    font-size: 16px;
+}
+
+.header_nav ul li a{
+    text-decoration: none;
 }
 
 .front_page{
     grid-area: 1/1/2/3;
 }
 
+.front_page article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 35px 30px;
+}
+
 .front_page img {
     width: 100%;
     height: auto;
+    grid-area: 1/1/2/3;
+}
+
+.front_page h2 {
+    font-size: 56px;
+    grid-area: 2/1/4/2;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 0px;
+    margin-bottom: 8px;
+}
+
+.front_page p {
+    line-height: 150%;
+}
+
+.front_page button {
+    background-color: var(--soft-red);
+    border: none;
+    height: 48px;
+    width: 185px;
+    align-self: self-end;
+    text-transform: uppercase;
+    color: var(--off-white);
+    letter-spacing: 5px;
 }
 
 .popular{
-    display: flex;
-    flex-direction: row;
     grid-area: 2/1/3/4;
-    justify-content: space-evenly;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 2px;
+}
+
+.popular article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 128px;
+    width: 33.3333%;
+    justify-content: space-between;
+}
+
+.popular article img{
+    width: 100px;
+    height: 110px;
+    flex-basis: 100%;
+    margin-right: 18px;
+}
+
+.popular_rating {
+    font-size: 32px;
+    font-weight: 600;
+    color:  var(--grayish-blue);
+    line-height: 100%;
+}
+
+.popular h2 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.popular h2+p {
+    width: 220px;
+    line-height: 164%;
+}
+
+.new {
+    background-color: var(--very-dark-blue);
+    padding: 28px 35px 30px 24px;
+}
+
+.new>p{
+    color: var(--soft-orange);
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 29px;
+}
+
+.new article{
+    margin-top: 63px;
+    position: relative;
+}
+
+.new article::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 103%;
+    background-color: var(--off-white);
+    opacity: 50%;
+    bottom: -32px;
+}
+
+.new article:last-of-type::after{
+    display: none;
+}
+
+.new article:first-of-type{
+    margin-top: 0;
+}
+
+.new article h3 {
+    color: var(--off-white);
+    margin-bottom: 10px;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+}
+
+.new article p {
+    color: var(--grayish-blue);
+    line-height: 170%;
 }
