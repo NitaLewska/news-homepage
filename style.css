@@ -12,7 +12,9 @@ html {
 }
 
 body {
-    margin: 0 auto 40px;
+    margin: 0 auto;
+    background-color: var(--off-white);
+    padding-bottom: 40px;
     min-height: 100vh;
     max-width: 1110px;
     display: flex;
