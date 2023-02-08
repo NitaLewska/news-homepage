@@ -75,6 +75,10 @@ header .hamburger {
     color: var(--very-dark-blue);
 }
 
+.header_nav ul li a:hover {
+    color: var(--soft-red);
+}
+
 .front_page {
     grid-area: 1/1/2/3;
 }
@@ -118,6 +122,12 @@ header .hamburger {
     text-transform: uppercase;
     color: var(--off-white);
     letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.front_page button:hover {
+    background-color: var(--very-dark-blue);
+    color: var(--off-white);
 }
 
 .popular {
@@ -153,6 +163,11 @@ header .hamburger {
 .popular h2 {
     font-size: 18px;
     font-weight: 800;
+    cursor: pointer;
+}
+
+.popular h2:hover {
+    color: var(--soft-red);
 }
 
 .popular h2+p {
@@ -200,6 +215,11 @@ header .hamburger {
     margin-bottom: 10px;
     font-size: 18px;
     letter-spacing: 1.2px;
+    cursor: pointer;
+}
+
+.new article h3:hover {
+    color: var(--soft-orange);
 }
 
 .new article p {
